@@ -1,29 +1,176 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style>
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+
+input {
+  outline: none;
+  border-style: none;
+}
+
+/* 去掉各 Table  cell 的边距并让其边重合 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 去除默认边框 */
+fieldset,
+img {
+  border: 0;
+}
+
+/* 去掉 firefox 下此元素的边框 */
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+/* 一致的 del 样式 */
+del {
+  text-decoration: line-through;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* 去掉列表前的标识, li 会继承 */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption,
+th {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,:active {
+  text-decoration: none;
+}
+
+/*清除浮动代码*/
+.clearfloat:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfloat {
+  zoom: 1;
+}
+
+/* .topLine {
+  background: #000;
+  height: 3px;
+} */
+
+/* 适配不同窗口 */
+@media screen and (max-width: 750px) {
+  .header {
+    width: 100%;
   }
+  .main {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .header {
+    width: 100%;
+  }
+  .main {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .header {
+    width: 1050px;
+  }
+  .main {
+    width: 1050px;
+  }
+}
+
+html,body {
+  width: 100%;
+}
+#app {
+  width: 100%;
+}
+
+/* 背景图 */
+body {
+  background: url("./assets/img/bodybg.jpg") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 </style>
