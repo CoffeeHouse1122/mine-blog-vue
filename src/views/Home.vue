@@ -4,10 +4,16 @@
           <img src="../assets/img/Mine.jpg" title="我是你爸爸" alt="头像" :style='autorStyle'>
           <span class="banner-title">Mine 博客</span>
           <span class="banner-motto">生死有命不由命, 我命由我不由天</span>
+          <a href="javascript:;" class="icon-music">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </a>
         </div>
         <div class="header" :style="headerStyle">
           <div class="w" style="width: 1050px; margin: 0 auto">
-            <div class="line"></div>
+            <!-- <div class="line"></div> -->
             <router-link to="/" @click.native="autorChange">首页</router-link>
             <router-link to="/main-guestbook"  @click.native="autorChange">留言板</router-link>
             <router-link to="/main-category" @click.native="autorChange">文章分类</router-link>
@@ -36,7 +42,7 @@ export default {
     getScrollHeight () { // 浮动栏随滚动条位置样式变化
       this.scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
       if (this.scrollTop >= 224) {
-        this.headerStyle = 'position: fixed; top: 0; width: 100%;'
+        this.headerStyle = 'position: fixed; top: 0; width: 100%; background-color: #fff; border-radius: 0;'
       } else {
         this.headerStyle = ''
       }
@@ -68,10 +74,14 @@ export default {
   height: 200px;
   max-width: 1050px;
   position: relative;
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, .3);
+  margin: 10px auto 0;
+  /* background-color: rgba(0, 0, 0, .3); */
   text-align: center;
   color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px #100c1ac7;
 }
 .banner img {
   display: block;
@@ -80,16 +90,18 @@ export default {
   position: absolute;
   top: 50%;
   margin-top: -37.5px;
-  left: 40px;
+  left: 60px;
   border-radius: 50%;
-  border: 3px solid #fff;
-  box-shadow: 0 2px 6px rgba(100, 100, 100, .3);
+  border: 2px solid #fff;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
   box-sizing: border-box;
   cursor: pointer;
   animation: change 1s linear forwards;
 }
 .banner img:hover {
-  border: 5px solid #FFFF00;
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;;
 }
 @keyframes change {
   0% {
@@ -112,30 +124,96 @@ export default {
   }
 }
 .banner .banner-title {
-  font-family: "STKaiti";
   font-weight: 700;
+  letter-spacing: 3px;
   font-size: 40px;
   position: absolute;
   top: 50px;
   left: 200px;
+  animation: neon 1.5s ease-in-out infinite alternate;
 }
 .banner .banner-motto {
-  font-family: "STKaiti";
   font-weight: 700;
   font-size: 40px;
   position: absolute;
   top: 110px;
   left: 200px;
+  letter-spacing: 3px;
+  animation: neon 1.5s ease-in-out infinite alternate;
+}
+@keyframes neon {
+  0% {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #228DFF, 0 0 5px #228DFF, 0 0 6px #228DFF, 0 0 7px #228DFF, 0 0 8px #228DFF;
+  }
+
+  100% {
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px #228DFF, 0 0 10px #228DFF, 0 0 12px #228DFF, 0 0 14px #228DFF, 0 0 16px #228DFF;
+  }
+}
+.banner .icon-music {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, .8);
+  border-radius: 10px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  text-align: center;
+  line-height: 66px;
+}
+.banner .icon-music i {
+  display: inline-block;
+  width: 4px;
+  background-color: #0d52b2;
+  margin: 0 2px;
+}
+.banner .icon-music i:first-child {
+  height: 25px;
+  transform-origin:0 25px;
+  animation: music 0.6s 0.4s infinite;
+}
+.banner .icon-music i:nth-child(2) {
+  height: 15px;
+  transform-origin:0 15px;
+  animation: music 0.5s 0.4s infinite;
+}
+.banner .icon-music i:nth-child(3) {
+  height: 20px;
+  transform-origin:0 20px;
+  animation: music 0.6s 0.4s infinite;
+}
+.banner .icon-music i:nth-child(4) {
+  height: 25px;
+  transform-origin:0 25px;
+  animation: music 0.5s 0.4s infinite;
+}
+@keyframes music {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  20% {
+    transform: scaleY(0.5)
+  }
+  40% {
+    transform: scaleY(0.7)
+  }
+  60% {
+    transform: scaleY(0.3)
+  }
+  80% {
+    transform: scaleY(0.6)
+  }
 }
 /* 头部banner结束 */
 
 /* 悬浮导航栏开始 */
 .header {
   height: 55px;
-  background-color: #100c1ac7;
+  background-color: rgba(255, 255, 255, .8);
+  border: 1px solid #fff;
   border-radius: 5px;
-  border: 1px solid #100c1ac7;
-  box-shadow: 0 2px 6px #100c1ac7;
+  box-shadow: 0 2px 6px rgba(100, 100, 100, .3);
   position: relative;
   top: 20px;
   margin: 0 auto;
@@ -162,41 +240,40 @@ export default {
   }
 }
 .header a {
-  font-family: "STKaiti";
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
   display: inline-block;
-  margin-left: 70px;
+  margin-left: 90px;
   color: #fff;
-  background: -webkit-linear-gradient(45deg, #CCCCFF, #FFCCCC, #CCFFFF, #FF6666, #FFFF99, #CCFF99);
+  background: -webkit-linear-gradient(45deg, #e91620, #fef900, #357900, #0157c5, #8b00fb, #FF1177);
   color: transparent;
   -webkit-background-clip: text;
-  animation: ran 20s linear infinite;
+  animation: ran 30s linear infinite;
 
 }
-.header a:nth-child(2) {
+.header a:nth-child(1) {
   margin-left: 35px;
 }
 .header a:nth-child(odd):hover {
-  transform: rotate(-5deg) scale(1.8);
+  transform: rotate(-10deg) scale(1.2);
 }
 .header a:nth-child(even):hover {
-  transform: rotate(5deg) scale(1.8);
+  transform: rotate(10deg) scale(1.2);
 }
 .header a:nth-child(even).router-link-exact-active {
-  transform: rotate(5deg) scale(1.8);
+  transform: rotate(10deg) scale(1.5);
   color: #D24D57;
 }
 .header a:nth-child(odd).router-link-exact-active {
-  transform: rotate(-5deg) scale(1.8);
+  transform: rotate(-10deg) scale(1.5);
   color: #D24D57;
 }
 @keyframes ran {
   from {
-      background-position: 0 0;
+      background-position: 0 1000px;
   }
   to {
-      background-position: 2000px 0;
+      background-position: 1000px 0;
   }
 }
 /* 悬浮导航栏结束 */
@@ -207,11 +284,13 @@ export default {
   background-color: rgba(255, 255, 255, .8);
   position: relative;
   margin: 50px auto 20px;
+  padding: 50px;
   border: 1px solid #fff;
   box-shadow: 0 2px 6px rgba(100, 100, 100, .3);
+  box-sizing: border-box;
   color: #000;
   text-align: center;
-  font-size: 50px;
+  border-radius: 20px;
 }
 /* 版块内容结束 */
 

@@ -168,9 +168,12 @@ html,body {
 
 /* 背景图 */
 body {
-  background: url("./assets/img/bodybg.jpg") no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  /* background: url("./assets/img/bodybg.jpg") no-repeat; */
+  background: url('./assets/img/多彩banner.png') no-repeat;
+  background-attachment: fixed;   /* 背景图位置固定 */
+  background-size: contain;
+  background-color: #f903;
+  font-family: "Microsoft YaHei", 微软雅黑, "Trebuchet MS", Arial, Verdana, Tahoma, sans-serif;
+  /* background-position: center; */
 }
 </style>
