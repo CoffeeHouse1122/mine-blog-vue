@@ -108,7 +108,7 @@ export default {
     transform: scale(1);
   }
   20% {
-    transform: scale(2);
+    transform: scale(2) rotateY(-30deg);
   }
   40% {
     transform: scale(1.8);
@@ -117,10 +117,10 @@ export default {
     transform: scale(1.6);
   }
   80% {
-    transform: scale(1.8)
+    transform: scale(1.8) rotateY(30deg);
   }
   100% {
-    transform: scale(2)
+    transform: scale(2);
   }
 }
 .banner .banner-title {
@@ -244,12 +244,7 @@ export default {
   font-weight: 700;
   display: inline-block;
   margin-left: 90px;
-  color: #fff;
-  background: -webkit-linear-gradient(45deg, #e91620, #fef900, #357900, #0157c5, #8b00fb, #FF1177);
-  color: transparent;
-  -webkit-background-clip: text;
-  animation: ran 30s linear infinite;
-
+  color: #000;
 }
 .header a:nth-child(1) {
   margin-left: 35px;
@@ -260,6 +255,7 @@ export default {
 .header a:nth-child(even):hover {
   transform: rotate(10deg) scale(1.2);
 }
+
 .header a:nth-child(even).router-link-exact-active {
   transform: rotate(10deg) scale(1.5);
   color: #D24D57;
@@ -267,14 +263,6 @@ export default {
 .header a:nth-child(odd).router-link-exact-active {
   transform: rotate(-10deg) scale(1.5);
   color: #D24D57;
-}
-@keyframes ran {
-  from {
-      background-position: 0 1000px;
-  }
-  to {
-      background-position: 1000px 0;
-  }
 }
 /* 悬浮导航栏结束 */
 
