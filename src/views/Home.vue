@@ -23,7 +23,7 @@
         <div class="main">
           <router-view></router-view>
         </div>
-        <div class="footer">Footer</div>
+        <div class="footer">zhaopeng.qiu</div>
     </div>
 </template>
 
@@ -272,12 +272,11 @@ export default {
   background-color: rgba(255, 255, 255, .8);
   position: relative;
   margin: 50px auto 20px;
-  padding: 50px;
+  padding: 20px;
   border: 1px solid #fff;
   box-shadow: 0 2px 6px rgba(100, 100, 100, .3);
   box-sizing: border-box;
   color: #000;
-  text-align: center;
   border-radius: 20px;
 }
 /* 版块内容结束 */
@@ -287,9 +286,10 @@ export default {
   width: 100%;
   height: 55px;
   position: relative;
-  background-color: rgba(0, 0, 0, .3);
-  color: #fff;
+  background-color: rgba(255, 255, 255, .8);
+  color: rgba(0, 0, 0, 0.9);
   text-align: center;
+  line-height: 55px;
 }
 /* 底部内容结束 */
 </style>
