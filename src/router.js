@@ -6,6 +6,7 @@ import mainHome from './components/main-home.vue'
 import mainGuestbook from './components/main-guestbook.vue'
 import mainCategory from './components/main-category.vue'
 import mainArchive from './components/main-archive.vue'
+import mainDetail from './components/main-detail.vue'
 
 Vue.use(Router)
 
@@ -37,6 +38,11 @@ export default new Router({
           name: 'main-archive',
           path: '/main-archive',
           component: mainArchive
+        },
+        {
+          name: 'main-detail',
+          path: '/main-detail',
+          component: mainDetail
         }
       ]
     }

@@ -12,7 +12,7 @@
         </div>
       </li>
     </ul>
-    <!-- <p>{{articleList}}</p> -->
+    
   </div>
 </template>
 

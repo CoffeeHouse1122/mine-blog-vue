@@ -15,9 +15,9 @@
           <div class="w" style="width: 1050px; margin: 0 auto">
             <!-- <div class="line"></div> -->
             <router-link to="/" @click.native="autorChange">首页</router-link>
-            <router-link to="/main-guestbook"  @click.native="autorChange">留言板</router-link>
+            <!-- <router-link to="/main-guestbook"  @click.native="autorChange">留言板</router-link> -->
             <router-link to="/main-category" @click.native="autorChange">文章分类</router-link>
-            <router-link to="/main-archive" @click.native="autorChange">文章归档</router-link>
+            <!-- <router-link to="/main-archive" @click.native="autorChange">文章归档</router-link> -->
           </div>
         </div>
         <div class="main">
