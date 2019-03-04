@@ -173,7 +173,39 @@ body {
   background-attachment: fixed;   /* 背景图位置固定 */
   background-size: contain;
   background-color: #f903;
-  font-family: "Microsoft YaHei", 微软雅黑, "Trebuchet MS", Arial, Verdana, Tahoma, sans-serif;
+  font-family: "Microsoft YaHei", "微软雅黑", "Trebuchet MS", Arial, Verdana, Tahoma, sans-serif;
   /* background-position: center; */
 }
+
+/* 代码高亮-start */
+.hljs {
+    text-align: left;
+    border-radius: 5px;
+    position: relative;
+    border: 5px solid #926262;
+    box-shadow: inset 0px 0px 9px 0px black;
+}
+
+.hljs li {
+    font-size: 18px;
+    line-height: 24px;
+    border-left: 1px solid #ffffff;
+}
+
+.hljs-string {
+    font-family: cursive, -webkit-pictograph; /* 防止引号显示为中文 */
+}
+
+.v-note-wrapper .v-note-panel .v-note-show .v-show-content, .v-note-wrapper .v-note-panel .v-note-show .v-show-content-html {
+    background: transparent !important;
+}
+
+.v-note-wrapper .v-note-panel {
+    border: none !important;
+}
+
+.markdown-body .highlight pre, .markdown-body pre {
+    background-color: transparent !important;
+}
+/* 代码高亮-end */
 </style>

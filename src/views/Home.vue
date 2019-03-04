@@ -62,6 +62,9 @@ export default {
 </script>
 
 <style>
+body {
+  min-width: 1200px;
+}
 .home {
   font-size: 16px;
   width: 100%;
@@ -220,7 +223,7 @@ export default {
   color: #000;
   /* text-align: center; */
   line-height: 55px;
-  z-index: 100;
+  z-index: 10000;
 }
 .header .line {
   position: absolute;

@@ -16,7 +16,6 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
       component: Home,
       children: [
         {
@@ -41,7 +40,7 @@ export default new Router({
         },
         {
           name: 'main-detail',
-          path: '/main-detail',
+          path: '/main-detail/:id',
           component: mainDetail
         }
       ]
